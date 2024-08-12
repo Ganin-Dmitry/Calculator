@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class CalculatorServiceImpl implements CalculatorService {
 
-    public String hello () {
+    /*public String hello () {
         return "Добро пожаловать в калькулятор!";
     }
 
@@ -55,5 +55,5 @@ public class CalculatorServiceImpl implements CalculatorService {
     }
     private String valueError() {
         return "<b>ERROR: Не указано значение!</b>";
-    }
+    }*/
 }
