@@ -13,29 +13,32 @@ public class CalculatorServiceImpl implements CalculatorService {
         if (!oneValue.isBlank() && !twoValue.isBlank()) {
             int intOneValue = Integer.parseInt(oneValue);
             int intTwoValue = Integer.parseInt(twoValue);
-            return oneValue + " + " + twoValue + " = " + Integer.toString(intOneValue + intTwoValue);
+            return Integer.toString(intOneValue + intTwoValue);
         } else {
             return valueError();
         }
     }
+
     public String minus (String oneValue, String twoValue) {
         if (!oneValue.isBlank() && !twoValue.isBlank()) {
             int intOneValue = Integer.parseInt(oneValue);
             int intTwoValue = Integer.parseInt(twoValue);
-            return oneValue + " - " + twoValue + " = " + Integer.toString(intOneValue - intTwoValue);
+            return Integer.toString(intOneValue - intTwoValue);
         } else {
             return valueError();
         }
     }
+
     public String multiply (String oneValue,String twoValue) {
         if (!oneValue.isBlank() && !twoValue.isBlank()) {
             int intOneValue = Integer.parseInt(oneValue);
             int intTwoValue = Integer.parseInt(twoValue);
-            return oneValue + " * " + twoValue + " = " + Integer.toString(intOneValue * intTwoValue);
+            return Integer.toString(intOneValue * intTwoValue);
         } else {
             return valueError();
         }
     }
+
     public String divide (String oneValue, String twoValue) {
         if (!oneValue.isBlank() && !twoValue.isBlank()) {
             int intOneValue = Integer.parseInt(oneValue);
@@ -43,17 +46,20 @@ public class CalculatorServiceImpl implements CalculatorService {
             if (intTwoValue == 0){
                 return nullError();
             } else {
-                return oneValue + " / " + twoValue + " = " + Integer.toString(intOneValue / intTwoValue);
+                return Integer.toString(intOneValue / intTwoValue);
             }
         } else {
             return valueError();
         }
 
     }
+
     private String nullError() {
         return "<b>ERROR: На ноль делить нельзя!</b>";
     }
+
     private String valueError() {
         return "<b>ERROR: Не указано значение!</b>";
     }
+
 }
